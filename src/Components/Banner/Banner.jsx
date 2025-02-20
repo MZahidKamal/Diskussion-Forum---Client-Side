@@ -2,18 +2,18 @@ import { useState, useCallback } from 'react';
 import { FaSearch, FaRegLightbulb, FaRegComments, FaRegChartBar } from 'react-icons/fa';
 
 const Banner = () => {
-    const [searchQuery, setSearchQuery] = useState('');
+    // const [searchQuery, setSearchQuery] = useState('');
     const [activeTab, setActiveTab] = useState('topics');
 
-    const handleSearchChange = useCallback((e) => {
+    /*const handleSearchChange = useCallback((e) => {
         setSearchQuery(e.target.value);
-    }, []);
+    }, []);*/
 
-    const handleSearchSubmit = useCallback((e) => {
+    /*const handleSearchSubmit = useCallback((e) => {
         e.preventDefault();
         console.log('Search query:', searchQuery);
         // Here you would typically handle the search logic
-    }, [searchQuery]);
+    }, [searchQuery]);*/
 
     const handleTabChange = useCallback((tab) => {
         setActiveTab(tab);
@@ -49,7 +49,7 @@ const Banner = () => {
                     </p>
                 </div>
 
-                <div className="max-w-4xl mx-auto bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 mb-12">
+                {/*<div className="max-w-4xl mx-auto bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 mb-12">
                     <form onSubmit={handleSearchSubmit} className="relative">
                         <input
                             type="text"
@@ -65,7 +65,7 @@ const Banner = () => {
                             <FaSearch className="text-white" />
                         </button>
                     </form>
-                </div>
+                </div>*/}
 
                 <div className="flex justify-center space-x-4 mb-12">
                     {Object.keys(tabContent).map((tab) => (

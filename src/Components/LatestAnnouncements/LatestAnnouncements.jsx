@@ -41,7 +41,7 @@ const LatestAnnouncements = () => {
 
 
     return (
-        <section id="latest-announcements" className="py-10 pb-20 drop-shadow-2xl">
+        <section id="latest-announcements" className="py-24 pb-20 drop-shadow-2xl">
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl font-bold text-gray-800 mb-6 flex items-center">
                     <FaBullhorn className="mr-2 text-purple-600" />
