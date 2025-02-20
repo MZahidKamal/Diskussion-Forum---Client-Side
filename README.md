@@ -1,9 +1,3 @@
-<div align="center">
-  <img src="https://res.cloudinary.com/dxh2iyxjs/image/upload/v1738949514/Diskussion_Forum_ywtwfq.jpg"  />
-</div>
-
-
-
 # 💬 Diskussion Forum  
 
 📝 **Diskussion Forum** is a **dynamic online discussion platform** where users can **post articles, engage in discussions, comment, upvote/downvote, and report inappropriate content**. It provides an **interactive and organized** way for people to share ideas while maintaining a **structured user management system** with admin controls.  

@@ -1,6 +1,6 @@
 import {useContext, useState} from 'react';
 import { FaHome, FaSearch, FaBell, FaBars, FaTimes, FaSignOutAlt, FaTachometerAlt } from 'react-icons/fa';
-import { IoMdAdd } from 'react-icons/io';
+import {IoIosCheckboxOutline, IoMdAdd, IoMdContract} from 'react-icons/io';
 import {useNavigate, Link, useLocation} from "react-router-dom";
 import AuthContext from "../../Providers/AuthContext.jsx";
 import DataContext from "../../Providers/DataContext.jsx";
@@ -17,6 +17,15 @@ const Navbar = () => {
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+    };
+
+
+    const handleLogoClick = (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     };
 
 
@@ -71,12 +80,15 @@ const Navbar = () => {
 
 
     return (
-        <nav className="bg-white border-b border-gray-200">
+        <nav className="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16">
                     <div className="flex items-center">
                         <div className="flex-shrink-0 flex items-center">
-                            <Link to={{pathname: '/'}} className="text-5xl font-bold italic bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-gray-900">
+                            <Link 
+                                to={{pathname:"/"}}
+                                onClick={handleLogoClick}
+                                className="text-5xl font-bold italic bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-gray-900">
                                 Diskussion
                             </Link>
                         </div>

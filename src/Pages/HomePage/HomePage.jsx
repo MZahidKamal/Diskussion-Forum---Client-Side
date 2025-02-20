@@ -4,7 +4,7 @@ import PostsByCategories from "../../Components/PostsByCategories/PostsByCategor
 import LatestAnnouncements from "../../Components/LatestAnnouncements/LatestAnnouncements.jsx";
 import NewsletterSubscription from "../../Components/NewsletterSubscription/NewsletterSubscription.jsx";
 import {useEffect} from "react";
-// import PopularPosts from "../../Components/PopularPosts/PopularPosts.jsx";
+import Benefits from "../../Components/Benefits/Benefits.jsx";
 
 
 const HomePage = () => {
@@ -20,8 +20,6 @@ const HomePage = () => {
         <>
             <Banner></Banner>
 
-            {/*<PopularPosts></PopularPosts>*/}
-
             <LatestAnnouncements></LatestAnnouncements>
 
             <div className="">
@@ -34,6 +32,8 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
+
+            <Benefits></Benefits>
 
             <NewsletterSubscription></NewsletterSubscription>
         </>
