@@ -91,6 +91,19 @@ const Navbar = () => {
     }
 
 
+    const handleMyPostsClick = () => {
+        if (user && user?.role === 'admin') {
+            navigate("/admin-dashboard/my-posts");
+        }
+        else if (user && user?.role === 'user') {
+            navigate("/user-dashboard/my-posts");
+        }
+        else {
+            navigate("/sign-in");
+        }
+    }
+
+
     const handleLogout = async () => {
         await signOutCurrentUser();
         navigate('/');
@@ -139,6 +152,15 @@ const Navbar = () => {
                             <IoMdAdd className="h-4 w-4 text-green-500" />
                             <span>New Post</span>
                         </button>
+                        {user && (
+                            <button
+                                onClick={() => handleMyPostsClick()}
+                                className="text-gray-700 w-32 px-4 py-2 rounded-md text-sm font-medium border border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-200 flex items-center space-x-2"
+                            >
+                                <IoIosCheckboxOutline className="h-4 w-4 text-green-500" />
+                                <span>My Posts</span>
+                            </button>
+                        )}
                         <button
                             className="text-gray-500 hover:text-gray-700 relative"
                             onClick={handleNotificationClick}>
