@@ -29,6 +29,24 @@ const Navbar = () => {
     };
 
 
+    const handleWhyUsClick = async () => {
+        if (currentLocation.pathname === '/') {
+            const target = document.getElementById('why-us');
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            await navigate('/');
+            setTimeout(() => {
+                const target = document.getElementById('why-us');
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 500);
+        }
+    };
+
+
     const handleNewPostClick = () => {
         if (user && user?.role === 'admin') {
             navigate("/admin-dashboard/create-new-post");
@@ -98,6 +116,13 @@ const Navbar = () => {
                             onClick={() => navigate('/')}
                             className="text-gray-500 hover:text-gray-700">
                             <FaHome className="h-5 w-5 text-blue-500" />
+                        </button>
+                        <button
+                            onClick={() => handleWhyUsClick()}
+                            className="text-gray-700 w-32 px-4 py-2 rounded-md text-sm font-medium border border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-200 flex items-center space-x-2"
+                        >
+                            <IoMdContract className="h-4 w-4 text-green-500" />
+                            <span>Why Us</span>
                         </button>
                         <div className="relative">
                             <input
